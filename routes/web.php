@@ -25,3 +25,10 @@ Route::group([
     Route::get('signout','SignoutController@signout')    ->name('signout:action');
 
 });
+Route::group([
+    'namespace' => 'UserCenter',
+    'prefix'    => 'usercenter',
+    'as'        => 'usercenter.'
+],function(){
+    Route::get('index','UserCenterController@index')    ->name('index');
+});
