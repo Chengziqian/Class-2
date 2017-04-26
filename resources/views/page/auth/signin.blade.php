@@ -3,10 +3,10 @@
     @include('index.head')
     <body>
     <div class="container">
-        <div class="card blue" style="width:40%;margin:100px auto">
+        <div class="card {{$info==0?'red':'blue'}}" style="width:40%;margin:100px auto">
             <div class="card-tabs">
               <ul class="tabs tabs-fixed-width tabs-transparent">
-                <li class="tab"><a class="active" href="#test5">登录</a></li>
+                <li class="tab"><a class="active" href="#test5">{{$info==0?'用户名或密码错误':'登录'}}</a></li>
               </ul>
             </div>
             <div class="card-content white lighten-4">

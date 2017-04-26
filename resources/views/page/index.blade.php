@@ -12,7 +12,7 @@
                             <i class="large material-icons" style="display:block;margin-top:20%;">play_arrow</i>
                             </div>
                             <div class="card-content" style="text-align:center">
-                            <p style="font-size:24px">班级展示</p>
+                            <p style="font-size:24px">成长轨迹</p>
                         </div>
                     </div></a>
                 </div>

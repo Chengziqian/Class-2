@@ -14,15 +14,16 @@
 
 
 
-Route::get('/', 'HomeController@index')  ->name('home');
+Route::get('/', 'HomeController@index')                                         ->name('home');
+Route::get('info/{info}','Info\InfoController@index')                           ->name('info');
 Route::group([
     'namespace' => 'Auth',
     'prefix'    => 'auth',
     'as'        => 'auth.'
 ],function(){
-    Route::get('signin','SigninController@index')    ->name('signin');
-    Route::post('signin','SigninController@signin')    ->name('signin:action');
-    Route::get('signout','SignoutController@signout')    ->name('signout:action');
+    Route::get('signin','SigninController@index')                               ->name('signin');
+    Route::post('signin','SigninController@signin')                             ->name('signin:action');
+    Route::get('signout','SignoutController@signout')                           ->name('signout:action');
 
 });
 Route::group([
@@ -30,5 +31,7 @@ Route::group([
     'prefix'    => 'usercenter',
     'as'        => 'usercenter.'
 ],function(){
-    Route::get('index','UserCenterController@index')    ->name('index');
+    Route::get('index','UserCenterController@index')                            ->name('index');
+    Route::post('cgpassword','UserCenterController@cgpassword')                 ->name('cgpassword');
+    Route::post('cgemail','UserCenterController@cgemail')                        ->name('cgemail');
 });

@@ -39,7 +39,7 @@ class SigninController extends Controller
         $this->middleware('guest', ['except' => 'logout']);
     }
     public function index(){
-        return view('page.auth.signin');
+        return view('page.auth.signin',['info' => $info=1]);
     }
     public function signin(Request $request){
         if(Auth::attempt([
@@ -47,6 +47,8 @@ class SigninController extends Controller
             'password' => $request->password])){
                 return redirect()->route('home');
             }
-            return view('page.auth.signin');
+        else {
+            return view('page.auth.signin', ['info' => $info=0]);
+        }
     }
 }

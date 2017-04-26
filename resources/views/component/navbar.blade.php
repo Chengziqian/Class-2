@@ -1,7 +1,7 @@
 <nav>
     <div class="nav-wrapper">
     <div class="container">
-      <a href="#" class="brand-logo">有个班级</a>
+      <a href="{{route('home')}}" class="brand-logo">有个班级</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">reorder</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
           @if(\Auth::check())
