@@ -1,5 +1,6 @@
 <html>
     @include('index.head')
+    <script type="text/javascript" src="/js/usercenter.js"></script>
     <body>
         @include('component.navbar')
         <div class="container">
@@ -44,25 +45,29 @@
                                         <div class="container">
                                           <div class="row">
                                             <div class="input-field col s12">
-                                              <input id="password" type="password" class="validate" name="old_password">
-                                              <label for="password">旧密码</label>
+                                              <input id="old_password" type="password" class="validate" name="old_password" onblur="check()">
+                                              <label for="old_password">旧密码</label>
                                             </div>
                                           </div>
                                           <div class="row">
                                             <div class="input-field col s12">
-                                              <input id="password" type="password" class="validate" name="new_password">
-                                              <label for="password">新密码</label>
+                                              <input id="new_password" type="password" class="validate" name="new_password" onblur="check()">
+                                              <label for="new_password">新密码</label>
                                             </div>
                                           </div>
                                           <div class="row">
                                             <div class="input-field col s12">
-                                              <input id="password" type="password" class="validate" name="repeat_password">
-                                              <label for="password">重复新密码</label>
+                                              <input id="re_password" type="password" class="validate" name="repeat_password" onblur="check()">
+                                              <label for="re_password">重复新密码</label>
+                                            </div>
+                                            <div class="container">
+                                            <div id="cgpassword_chip" class="chip red" style="display:none;">
+                                            </div>
                                             </div>
                                           </div>
                                           <div class="row">
                                             <div class="input-field col s12">
-                                              <button class="btn waves-effect waves-light" type="submit" name="action" style="display:block;margin:0 auto">提交</button>
+                                              <button id="cgpassword" class="btn disabled waves-effect waves-light" type="submit" name="action" style="display:block;margin:0 auto">提交</button>
                                             </div>
                                           </div>
                                         </div>
@@ -79,19 +84,21 @@
                                         <div class="container">
                                           <div class="row">
                                             <div class="input-field col s12">
-                                              <input id="password" type="email" class="validate" name="new_email">
-                                              <label for="password">设置新邮箱</label>
+                                              <input id="email" type="email" class="validate" name="new_email" onblur="check()">
+                                              <label for="email">设置新邮箱</label>
                                             </div>
                                           </div>
                                           <div class="row">
                                             <div class="input-field col s12">
-                                              <input id="password" type="password" class="validate" name="password">
-                                              <label for="password">输入用户密码</label>
+                                              <input id="email_password" type="password" class="validate" name="password" onblur="check()">
+                                              <label for="email_password">输入用户密码</label>
                                             </div>
+                                          </div>
+                                          <div id="cgemail_chip" class="chip red" style="display:none;">
                                           </div>
                                           <div class="row">
                                             <div class="input-field col s12">
-                                              <button class="btn waves-effect waves-light" type="submit" name="action" style="display:block;margin:0 auto">提交</button>
+                                              <button id="cgemail" class="btn disabled waves-effect waves-light" type="submit" name="action" style="display:block;margin:0 auto">提交</button>
                                             </div>
                                           </div>
                                         </div>
@@ -104,7 +111,7 @@
                 </li>
                 <li>
                     <div class="collapsible-header "><i class="material-icons">info</i>通知中心</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    <div class="collapsible-body"><span>暂未开放</span></div>
                 </li>
             </ul>
         </div>

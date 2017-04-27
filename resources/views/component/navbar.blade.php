@@ -8,7 +8,7 @@
               <li><a href="{{route('usercenter.index')}}">{{\Auth::user()->name}}</a></li>
               <li><a class="waves-effect waves-light btn"  href="{{route('auth.signout:action')}}">登出</a></li>
           @else
-              <li><a class="waves-effect waves-light btn"  href="{{route('auth.signin')}}">登陆</a></li>
+              <li><a class="waves-effect waves-light btn"  href="{{route('auth.signin')}}">登录</a></li>
           @endif
       </ul>
       <ul class="side-nav" id="mobile-demo">
