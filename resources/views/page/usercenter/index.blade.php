@@ -60,10 +60,10 @@
                                               <input id="re_password" type="password" class="validate" name="repeat_password" onblur="check()">
                                               <label for="re_password">重复新密码</label>
                                             </div>
-                                            <div class="container">
-                                            <div id="cgpassword_chip" class="chip red" style="display:none;">
-                                            </div>
-                                            </div>
+                                          </div>
+                                          <div class="container">
+                                          <div id="cgpassword_chip" class="chip red" style="display:none;text-align:center;color:white;">
+                                          </div>
                                           </div>
                                           <div class="row">
                                             <div class="input-field col s12">
@@ -94,7 +94,9 @@
                                               <label for="email_password">输入用户密码</label>
                                             </div>
                                           </div>
-                                          <div id="cgemail_chip" class="chip red" style="display:none;">
+                                          <div class="container">
+                                          <div id="cgemail_chip" class="chip red" style="display:none;text-align:center;color:white;">
+                                          </div>
                                           </div>
                                           <div class="row">
                                             <div class="input-field col s12">

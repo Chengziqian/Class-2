@@ -10,13 +10,13 @@ function check(){
                     $('#cgpassword_chip').css('display','none');
                 }
                 else {
-                    $('#cgpassword_chip').css('display','inline-block');
+                    $('#cgpassword_chip').css('display','block');
                     $('#cgpassword_chip').html('密码不得少于6位<i class="close material-icons">close</i>');
                     $('#cgpassword').addClass('disabled');
                 }
             }
             else {
-                $('#cgpassword_chip').css('display','inline-block');
+                $('#cgpassword_chip').css('display','block');
                 $('#cgpassword_chip').html('两次输入不一致<i class="close material-icons">close</i>');
                 $('#cgpassword').addClass('disabled');
             }
@@ -28,7 +28,7 @@ function check(){
             $('#cgemail_chip').css('display','none');
         }
         else {
-            $('#cgemail_chip').css('display','inline-block');
+            $('#cgemail_chip').css('display','block');
             $('#cgemail_chip').html('邮箱不合法<i class="close material-icons">close</i>');
             $('#cgemail').addClass('disabled');
         }

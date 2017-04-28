@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row">
                 <div class="col s12 m6 l3">
-                    <a href="#" style="color:white"><div class="card small hoverable teal lighten-3">
+                    <a href="{{route('grow.index')}}" style="color:white"><div class="card small hoverable teal lighten-3">
                         <div class="card-image" style="text-align:center">
                             <i class="large material-icons" style="display:block;margin-top:20%;">play_arrow</i>
                             </div>
@@ -37,7 +37,7 @@
                     </div></a>
                 </div>
                 <div class="col s12 m6 l3">
-                    <a href="#" style="color:white"><div class="card small hoverable light-blue lighten-3">
+                    <a href="{{route('doc.index')}}" style="color:white"><div class="card small hoverable light-blue lighten-3">
                         <div class="card-image" style="text-align:center">
                             <i class="large material-icons" style="display:block;margin-top:20%;">repeat</i>
                             </div>

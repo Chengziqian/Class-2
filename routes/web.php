@@ -33,5 +33,19 @@ Route::group([
 ],function(){
     Route::get('index','UserCenterController@index')                            ->name('index');
     Route::post('cgpassword','UserCenterController@cgpassword')                 ->name('cgpassword');
-    Route::post('cgemail','UserCenterController@cgemail')                        ->name('cgemail');
+    Route::post('cgemail','UserCenterController@cgemail')                       ->name('cgemail');
+});
+Route::group([
+    'namespace' => 'Grow',
+    'prefix'    => 'grow',
+    'as'        => 'grow.'
+],function(){
+    Route::get('index','GrowController@index')                                  ->name('index');
+});
+Route::group([
+    'namespace' => 'Doc',
+    'prefix'    => 'doc',
+    'as'        => 'doc.'
+],function(){
+    Route::get('index','DocController@index')                                  ->name('index');
 });

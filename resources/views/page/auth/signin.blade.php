@@ -2,8 +2,9 @@
 <html>
     @include('index.head')
     <body>
+        @include('component.navbar')
     <div class="container">
-        <div class="card {{$info==0?'red':'blue'}}" style="width:40%;margin:100px auto">
+        <div class="card {{$info==0?'red':'blue'}}">
             <div class="card-tabs">
               <ul class="tabs tabs-fixed-width tabs-transparent">
                 <li class="tab"><a class="active" href="#test5">{{$info==0?'用户名或密码错误':'登录'}}</a></li>

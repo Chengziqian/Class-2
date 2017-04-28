@@ -16,15 +16,15 @@
             <li>
                 <div class="userView">
                     <div class="background">
-                        <img src="images/office.jpg">
+                        <img src="/images/office.jpg">
                     </div>
-                    <a href="#!user"><img class="circle" src="images/bg.jpg"></a>
+                    <a href="#!user"><img class="circle" src="/images/bg.jpg"></a>
                     <a href="#!name"><span class="white-text name">{{\Auth::user()->name}}</span></a>
                     <a href="#!email"><span class="white-text email">{{\Auth::user()->stu_code}}</span></a>
                 </div>
             </li>
         @else
-            <li><a href="" class="waves-effect waves-light btn blue lighten-1">登录</a></li>
+            <li><a href="{{route('auth.signin')}}" class="waves-effect waves-light btn blue lighten-1">登录</a></li>
         @endif
         <li><a href="#!"><i class="material-icons">play_arrow</i>班级展示</a></li>
         <li><a href="#!"><i class="material-icons">chat</i>留言板</a></li>
