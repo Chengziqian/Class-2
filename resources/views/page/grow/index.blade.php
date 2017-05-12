@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
     @include('index.head')
+</head>
     <body>
         @include('component.navbar')
         <div class="container">

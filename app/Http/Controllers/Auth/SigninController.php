@@ -48,7 +48,7 @@ class SigninController extends Controller
                 return redirect()->route('home');
             }
         else {
-            return view('page.auth.signin', ['info' => $info=0]);
+            return view('page.auth.signin', ['info' => $info=0, 'stu_code' => $request->stu_code]);
         }
     }
 }

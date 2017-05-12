@@ -1,6 +1,7 @@
 <html>
+<head>
     @include('index.head')
-    <script type="text/javascript" src="/js/usercenter.js"></script>
+</head>
     <body>
         @include('component.navbar')
         <div class="container">
@@ -40,24 +41,24 @@
                                 <div class="collapsible-header"><i class="material-icons">power_settings_new</i>修改密码</div>
                                 <div class="collapsible-body">
                                     <div class="row">
-                                        <form id="one" class="col s12" action="{{route('usercenter.cgpassword')}}" method="post">
+                                        <form id="one" class="col s12" action="{{route('usercenter.cgpassword')}}" method="post" >
                                             {{csrf_field()}}
                                         <div class="container">
                                           <div class="row">
                                             <div class="input-field col s12">
-                                              <input id="old_password" type="password" class="validate" name="old_password" onblur="check()">
+                                              <input id="old_password" type="password" class="validate" name="old_password" required/>
                                               <label for="old_password">旧密码</label>
                                             </div>
                                           </div>
                                           <div class="row">
                                             <div class="input-field col s12">
-                                              <input id="new_password" type="password" class="validate" name="new_password" onblur="check()">
+                                              <input id="new_password" type="password" class="validate" name="new_password" required  onblur="error()"/>
                                               <label for="new_password">新密码</label>
                                             </div>
                                           </div>
                                           <div class="row">
                                             <div class="input-field col s12">
-                                              <input id="re_password" type="password" class="validate" name="repeat_password" onblur="check()">
+                                              <input id="re_password" type="password" class="validate" name="repeat_password"  required onblur="error()"/>
                                               <label for="re_password">重复新密码</label>
                                             </div>
                                           </div>
@@ -67,7 +68,7 @@
                                           </div>
                                           <div class="row">
                                             <div class="input-field col s12">
-                                              <button id="cgpassword" class="btn disabled waves-effect waves-light" type="submit" name="action" style="display:block;margin:0 auto">提交</button>
+                                              <button id="cgpassword" class="btn waves-effect waves-light" type="submit" name="action" style="display:block;margin:0 auto">提交</button>
                                             </div>
                                           </div>
                                         </div>
@@ -84,13 +85,13 @@
                                         <div class="container">
                                           <div class="row">
                                             <div class="input-field col s12">
-                                              <input id="email" type="email" class="validate" name="new_email" onblur="check()">
+                                              <input id="email" type="email" class="validate" name="new_email" required/>
                                               <label for="email">设置新邮箱</label>
                                             </div>
                                           </div>
                                           <div class="row">
                                             <div class="input-field col s12">
-                                              <input id="email_password" type="password" class="validate" name="password" onblur="check()">
+                                              <input id="email_password" type="password" class="validate" name="password" required/>
                                               <label for="email_password">输入用户密码</label>
                                             </div>
                                           </div>
@@ -100,7 +101,7 @@
                                           </div>
                                           <div class="row">
                                             <div class="input-field col s12">
-                                              <button id="cgemail" class="btn disabled waves-effect waves-light" type="submit" name="action" style="display:block;margin:0 auto">提交</button>
+                                              <button id="cgemail" class="btn waves-effect waves-light" type="submit" name="action" style="display:block;margin:0 auto">提交</button>
                                             </div>
                                           </div>
                                         </div>
@@ -117,5 +118,32 @@
                 </li>
             </ul>
         </div>
+        <script>
+        // var new_password = $('#new_password');
+        // var re_password = $('#re_password');
+        // console.log(new_password[0].value);
+        // console.log(re_password.val());
+            function error() {
+                var new_password = $('#new_password');
+                var re_password = $('#re_password');
+                // var new_password = document.getElementById("new_password");
+                // var re_password = document.getElementById("re_password");
+                    if ((new_password.val() != ''&&re_password.val() != '')&&(new_password.val() != re_password.val())) {
+                        re_password[0].setCustomValidity('两次密码输入不一致');
+                        return false;
+                    }
+                    else {
+                        if (new_password.val().length >= 6) {
+                            re_password[0].setCustomValidity('');
+                            new_password[0].setCustomValidity('');
+                            return true;
+                        }
+                        else {
+                            new_password[0].setCustomValidity('密码不得少于6位');
+                            return false;
+                        }
+                    }
+            }
+        </script>
     </body>
 </html>
